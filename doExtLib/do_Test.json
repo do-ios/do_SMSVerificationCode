@@ -1,0 +1,80 @@
+{
+    "ID": "do_SMSVerificationCode",
+    "Type":"SM",
+    "Name": "短信验证码",
+    "Version": "Internal",
+    "Description": "短信验证码组件,给用户手机号码发送验证码并验证",
+    "Icon": "",
+    "IOS": {
+        "Support": 1,
+        "MinVersion": "8.0"
+    },
+    "Android": {
+        "Support": 1,
+        "MinVersion": ""
+    },
+    "Windows": {
+        "Support": 0,
+        "MinVersion": ""
+    },
+    "WindowsPhone": {
+        "Support": 0,
+        "MinVersion": ""
+    },
+    "Html": {
+        "Support": 1,
+        "MinVersion": "5.0"
+    },
+    "Properties": [],
+    "Events": [],
+    "syncMethodes": [],
+    "asyncMethodes": [
+                      {
+                      "ID": "getSMSVerificationCode",
+                      "Name": "根据手机号获取短信验证码",
+                      "Description": "",
+                      "ReturnType": "Node",
+                      "ReturnType_JavaScript": "",
+                      "ReturnDesc": "返回发送验证码状态,成功返回{result:true},失败的话还会返回errorMessage.例如{result:false,errorMessage:'408'}",
+                      "Paras": [
+                                {
+                                "ID": "phoneNumber",
+                                "Name": "手机号码",
+                                "Type": "String",
+                                "Type_JavaScript": "String",
+                                "Required": 1,
+                                "DefaultValue": "",
+                                "Description": "对该号码发送验证码"
+                                },
+                                ]
+                      },
+                      {
+                      "ID": "verifySMSVerificationCode",
+                      "Name": "验证短信验证码",
+                      "Description": "",
+                      "ReturnType": "Node",
+                      "ReturnType_JavaScript": "",
+                      "ReturnDesc": "验证短信验证码,成功返回{result:true},失败的话还会返回errorMessage.例如{result:false,errorMessage:'408'}",
+                      "Paras": [
+                                {
+                                "ID": "code",
+                                "Name": "验证码",
+                                "Type": "String",
+                                "Type_JavaScript": "String",
+                                "Required": 1,
+                                "DefaultValue": "",
+                                "Description": "收到的验证码"
+                                },
+                                {
+                                "ID": "phoneNumber",
+                                "Name": "手机号码",
+                                "Type": "String",
+                                "Type_JavaScript": "String",
+                                "Required": 1,
+                                "DefaultValue": "",
+                                "Description": "手机号码"
+                                }
+                                ]
+                      }
+                      ]
+}
